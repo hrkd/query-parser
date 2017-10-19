@@ -1,6 +1,7 @@
 export default function Parser(q=location.search) {
-  const queries = q.replace('?','').split('&');
+  if(!q)return null;
   let result = {}
+  const queries = q.replace('?','').split('&');
   queries.forEach((val)=>{
     const keyValue = val.split('=');
     const braket = '%5B%5D';
