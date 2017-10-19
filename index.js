@@ -1,5 +1,5 @@
-const parseQuery = ()=>{
-  const queries = location.search.replace('?','').split('&');
+export default function Parser(q=location.search) {
+  const queries = q.replace('?','').split('&');
   let result = {}
   queries.forEach((val)=>{
     const keyValue = val.split('=');
